@@ -39,3 +39,52 @@ docker run -d --name mongo -p 2717:27017 -v ~/mongodb:/data/db mvertes/alpine-mo
 docker exec -it mongo mongo
 ```
 
+Based on the provided text, you can see a list of available MongoDB sample databases in this forked GitHub repository:
+
+sample_airbnb
+sample_analytics
+sample_geospatial
+sample_mflix
+sample_supplies
+sample_training
+sample_weatherdata
+You can load these sample databases using the provided .json files or the docker-compose file.
+
+To load the sample_mflix database, you can follow the steps provided in the previous question. Here are the steps to summarize it:
+
+Create a new database and collection using the MongoDB Compass:
+Name of the database: mflixdb
+Name of the collection: filmes
+Import the movies.json file:
+Click ADD DATA > Import File
+Select the movies.json file
+Click Import
+You can follow the same steps for other databases using their respective JSON files available in the forked GitHub repository.
+
+After you've imported the JSON file, you can verify the data by clicking the filmes collection in the mflixdb database.
+
+You can also use the provided docker-compose file and script.sh file to load the data using Docker. The following steps show you how to do it:
+
+Run this command to pull the MongoDB Docker image:
+Edit
+Full Screen
+Copy code
+docker pull mvertes/alpine-mongo
+Run this command to start the MongoDB Docker container:
+css
+Edit
+Full Screen
+Copy code
+docker run -d --name mongo -p 2717:27017 -v ~/mongodb:/data/db mvertes/alpine-mongo
+Run the provided script.sh file with the proper arguments:
+bash
+Edit
+Full Screen
+Copy code
+./script.sh localhost 2717
+Finally, you can start the MongoDB shell:
+Edit
+Full Screen
+Copy code
+docker exec -it mongo mongo
+Now you can access the MongoDB database and query the
